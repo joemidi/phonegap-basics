@@ -1,0 +1,21 @@
+# Folder settings files
+.DS_Store
+Desktop.ini
+
+# Logs files
+*.log
+logs/
+
+# Node modules
+node_modules/
+/**/node_modules/
+
+# Bower components
+bower_components/
+/**/bower_components/
+
+# Other
+.sass-cache/
+.idea
+*.iml
+bower_components/

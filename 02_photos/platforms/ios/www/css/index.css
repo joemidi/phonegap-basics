@@ -1,0 +1,160 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+@-webkit-keyframes slideOn {
+    0% { -webkit-transform: translate(-105%, 0); }
+    100% { -webkit-transform: none; }
+}
+
+
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A7A7A7),
+        color-stop(0.51, #E4E4E4)
+    );
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:large;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    text-transform:uppercase;
+    width:100%;
+    position: fixed;
+}
+
+header {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    background-color: rgba(68, 68, 68, 0.9);
+    color: #f3f3f3;
+    text-align: center;
+    padding: 0.3em 1em;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 1.2em;
+    margin: 0;
+    font-weight: normal;
+}
+
+nav {
+    position: absolute;
+    left: 0; right: 0;
+    bottom: 0;
+    background-color: rgba(68, 68, 68, 0.9);
+    padding: 0.3em 1em;
+    text-align: right;
+    z-index: 10;
+}
+
+nav button {
+    border: 0;
+    background: none;
+    color: #f3f3f3;
+    font-size: 1em;
+    margin: 0;
+    display: inline-block;
+    padding: 1em 1em 0.3em 1em;
+}
+
+main {
+    /*background-color: #EA4335;*/
+    position: absolute;
+    padding: 2em 0 3.5em 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    overflow: auto;
+}
+
+ul.listview {
+    list-style: none;
+    margin: 0;
+    padding: 0; 
+}
+
+ul.listview a {
+    display: block;
+    text-decoration: none;
+    color: #4285F4;
+    background-color: #f3f3f3;
+    padding: 0.5em 1em;
+    border-bottom: 1px solid #4285F4;
+}
+
+.slideOn {
+    -webkit-animation: slideOn 1s ease-out;
+}
+
+ul.listview img {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    margin-right: 1em;
+    vertical-align: middle;
+}
+
+.ios header {
+    padding: 1.5em 1em 0.3em 1em;
+}
+
+.ios main {
+    padding: 3.5em 0em;
+}
+
+section#preview {
+    position: absolute;
+    top: 0; left: 100%; width: 100%; bottom: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+    cursor: pointer;
+}
+
+main, section#preview {
+    -webkit-transition: -webkit-transform 1s;
+}
+
+.preview main {
+    -webkit-transform: translate(-100%, 0);
+}
+
+.preview section#preview {
+    -webkit-transform: translate(-100%, 0);
+}
+
+

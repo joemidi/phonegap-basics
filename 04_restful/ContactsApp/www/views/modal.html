@@ -1,0 +1,28 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <button ng-click="closeModal()" class="button button-outline button-assertive">Cancel</button>
+    <h1 class="title">Add new contact</h1>
+  </ion-header-bar>
+  <ion-content>
+    <div class="list padding">
+
+      <h2>Enter contact details:</h2>
+
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">First Name</span>
+        <input ng-model="newdetails.forename" type="text" placeholder="John">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Last Name</span>
+        <input ng-model="newdetails.surname" type="text" placeholder="Suhr">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Number</span>
+        <input ng-model="newdetails.number" type="text" placeholder="020 8008 8080">
+      </label>
+
+      <button ng-click="save()" class="button button-block button-balanced">Save</button>
+
+    </div>
+  </ion-content>
+</ion-modal-view>

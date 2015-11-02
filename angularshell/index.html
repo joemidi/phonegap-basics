@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="AngularShell">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Shell</title>
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+</head>
+<body>
+
+
+  <h1>Angular Shell</h1>
+
+  <p>Please choose the view you want to see:</p>
+
+  <nav>
+    <a ng-href="#/main">Main</a>
+    <a ng-href="#/info">Information</a>
+  </nav>
+
+  <main>
+    <div ng-view></div>
+  </main>
+
+  <script src="js/app.js" type="text/javascript"></script>
+
+</body>
+</html>
